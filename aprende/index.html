@@ -73,6 +73,9 @@
         <!-- Menu desplegable en mobile -->
         <ul id="menu" class="hidden md:hidden mt-2 bg-transparent p-4 space-y-2">
             <li class="block text-lime-100 font-semibold">
+                <a href="#">Home</a>
+            </li>
+            <li class="block text-lime-100 font-semibold">
                 <a href="#">Tradición</a>
             </li>
             <li>
@@ -114,49 +117,50 @@
     <!-- Main -->
     <main>
         <article class="bg-transparent grid grid-cols-1 md:grid-cols-7">
-            <h2 class="bg-transparent text-center text-4xl md:text-6xl text-teal-900 fuenteesmall col-span-1 md:col-span-7 m-4 md:m-2">
-                Aprende
-            </h2>
-            <p class="bg-transparent text-center text-l md:text-2xl text-teal-900 text-teal-900 col-span-1 md:col-span-7 m-4 md:mb-12">
-                Bienvenid@. En esta sección encontrarás lo necesario para empezar a tejer desde cero. 
-            </p>
-            <p class="bg-teal-900  text-justify text-l text-lime-100 col-span-1 md:col-span-3 px-8 md:px-20 py-6 md:py-12">
-                <span class="fuentepixel text-2xl"> Materiales </span> <br> <br>
-                <span class="font-semibold"> ➜ Aguja : </span> hay de distintos materiales. Las más cómodas son las ergonómicas con mango antidezlizante y puntera de metal. <br>
-                La numeración indica de que grosor es el gancho, se elige en base al hilado que vamos a utilizar, y dependiendo que tan apretado queramos los puntos. Un grosor adecuado para comenzar a tejer cómodamente está entre 5 y 7 mm. <br> <br>
-                <span class="font-semibold"> ➜ Hilados : </span> Pueden ser de origen vegetal, como el algodón o el lino; de origen animal, como la lana, la seda o el mohair; o de origen sintético, como el nailon, el acrílico o el poliéster. <br>
-                La mayoría de hilados en el meracdo son compuestos por una mezcla de estos materiales. Para tus primeras puntadas puedes comprar un ovillo de acrílico ya que son los más económicos. Aunque también es válido pedir a algún conocido restos de lanas que tenga por ahí. <br> <br>
-                <span class="font-semibold"> ➜ Tijeras </span> <br> <br>
-                <span class="font-semibold"> ➜ Marcadores de puntos </span> <br> <br>
-                <span class="font-semibold"> ➜ Cinta métrica </span> <br> <br>
-                <span class="font-semibold"> ➜ Aguja lanera </span>
-            </p>
-            <p class="bg-sky-200  text-justify text-l text-teal-900 col-span-1 md:col-span-4 px-8 md:px-20 py-6 md:py-12">
-                <span class="fuentepixel text-2xl"> Cómo agarrar la aguja </span> <br> <br>
-                No hay una forma predeterminada para sostner la aguja mientras tejes, pero si debes lograr tomar la aguja con una mano, el hilo con la otra, mantener la tensión adecuada y, además, contar con dedos «libres» para sostener el tejido. <br> <br>
-                Estos son algunos de los agarres usuales, los cuales imitan rutinas que ya conoces. Prueba hasta que encuetres el que te quede más cómodo. <br> <br>
-                <span> ➜ Tipo cuchillo al cortar un filete. </span> <br> <br>
-                <span> ➜ Parecido a tomar una sopa con cuchara. </span> <br> <br>
-                <span> ➜ Igual que sostienes un bolígrafo para escribir. </span> <br> <br>
-                <span> ➜ Como si te cepillas los dientes. </span> <br> <br>
-                <img src="./media/agarres.jpg" alt="distintos agarres de la aguja de crochet" class="w-96 rounded-2xl">
-            </p>
-        </article>
-  
-        <div class="flex flex-col items-center my-8 md:my-20 gap-6 lg:flex-row lg:justify-center lg:space-x-4">
-            <div class="bg-rose-200 border-2 border-teal-900 text-teal-900 p-4 rounded-2xl hover:bg-sky-200 items-center">
-              <a href="#">
-                <p class="text-2xl fuentepixel">PUNTOS BÁSICOS</p>
-              </a>
-            </div>
+            <header class="col-span-1 md:col-span-7 text-center">
+                <h1 class="bg-transparent text-4xl md:text-6xl text-teal-900 fuenteesmall m-4 md:m-2">
+                    Aprende
+                </h1>
+                <p class="bg-transparent text-l md:text-2xl text-teal-900 m-4 md:mb-12">
+                    Bienvenid@. En esta sección encontrarás lo necesario para empezar a tejer desde cero.
+                </p>
+            </header>
         
-            <div class="bg-rose-200 border-2 border-teal-900 text-teal-900 p-4 rounded-2xl hover:bg-sky-200 items-center">
-              <a href="#">
-                <p class="text-2xl fuentepixel">TUTORIALES</p>
-              </a>
+            <section class="bg-teal-900 text-lime-100 text-justify col-span-1 md:col-span-3 px-8 md:px-20 py-6 md:py-12">
+                <h2 class="fuentepixel text-2xl">Materiales</h2> 
+                 <p class="mt-4"><span class="font-semibold">➜ Aguja:</span> Hay de distintos materiales. Las más cómodas son las ergonómicas con mango antideslizante y puntera de metal. <br>
+                La numeración indica el grosor del gancho, elegido según el hilado y la tensión deseada. Un grosor adecuado para principiantes es entre 5 y 7 mm.</p>
+                <p class="mt-4"><span class="font-semibold">➜ Hilados:</span> Pueden ser de origen vegetal, animal o sintético. La mayoría de los hilados en el mercado son mezclas de estos materiales. Para empezar, se recomienda acrílico por su bajo costo.</p>
+                <p class="mt-4"><span class="font-semibold">➜ Tijeras</span></p>
+                <p class="mt-4"><span class="font-semibold">➜ Marcadores de puntos</span></p>
+                <p class="mt-4"><span class="font-semibold">➜ Cinta métrica</span></p>
+                <p class="mt-4"><span class="font-semibold">➜ Aguja lanera</span></p>
+            </section>
+        
+            <section class="bg-sky-200 text-teal-900 text-justify col-span-1 md:col-span-4 px-8 md:px-20 py-6 md:py-12">
+                <h2 class="fuentepixel text-2xl">Cómo agarrar la aguja</h2> 
+                <p class="mt-4">No hay una forma predeterminada para sostener la aguja mientras tejes, pero debes lograr tomar la aguja con una mano, el hilo con la otra, mantener la tensión adecuada y, además, contar con dedos «libres» para sostener el tejido.</p>
+                <p class="mt-4">Estos son algunos agarres comunes. Prueba hasta encontrar el que te resulte más cómodo:</p>
+                <ul class="list-disc pl-5 mt-4">
+                    <li class="mt-4">Tipo cuchillo al cortar un filete.</li>
+                    <li class="mt-4">Parecido a tomar una sopa con cuchara.</li>
+                    <li class="mt-4">Igual que sostienes un bolígrafo para escribir.</li>
+                    <li class="my-4">Como si te cepillaras los dientes.</li>
+                </ul>
+                <div class="flex">
+                    <img src="./media/agarres.jpg" alt="Distintos agarres de la aguja de crochet" class="w-96 rounded-2xl">
+                </div>
+            </section>
+        </article>
+        
+        <div class="flex flex-col items-center my-8 md:my-20 gap-6 lg:flex-row lg:justify-center lg:space-x-4">
+            <div class="bg-rose-200 border-2 border-teal-900 text-teal-900 p-4 rounded-2xl hover:bg-sky-200">
+                <a href="#" class="text-2xl fuentepixel">PUNTOS BÁSICOS</a>
+            </div>
+            <div class="bg-rose-200 border-2 border-teal-900 text-teal-900 p-4 rounded-2xl hover:bg-sky-200">
+                <a href="#" class="text-2xl fuentepixel">TUTORIALES</a>
             </div>
         </div>
-
 
     </main>
 
@@ -167,7 +171,7 @@
           <a href="#" class="fuentepixel rounded-2xl bg-lime-100 p-2 text-xl text-teal-900 hover:bg-sky-200 hover:text-rose-300 ">Contacto</a>
         </div>
         <div class="flex justify-center space-x-6 mb-4">
-          <a href="./verdecito.html" class="fuentepixel text-lime-100 hover:text-sky-200">Home</a>
+          <a href="#" class="fuentepixel text-lime-100 hover:text-sky-200">Home</a>
           <a href="#" class="fuentepixel text-lime-100 hover:text-sky-200">Back to top</a>
         </div>
       </footer>
