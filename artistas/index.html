@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEDC / Artistas</title>
+  <!--  Mi hoja de estilos -->
+  <link rel="stylesheet" type="text/css" href="./css/estilos.css">
+  <!--  Adobe Fonts kit -->
+  <link rel="stylesheet" href="https://use.typekit.net/bup5rhc.css">
+  <!--  Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--  Vue js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body class="bg-lime-100 flex flex-col min-h-screen">
+    <!-- nav -->
+    <nav class="bg-teal-900 p-4 pb-6 rounded-2xl m-2 md:rounded-full md:m-6">
+        <!-- Menu notebook -->
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Links -->
+            <ul class="hidden md:flex space-x-6">
+                <li class="px-2 py-1 md:px-4 md:py-2 rounded-full border-2 border-lime-100 text-lime-100 bg-transparent hover:bg-lime-100 hover:text-teal-900 text-sm">
+                    <a href="#">Tradición</a>
+                </li>
+                <li>
+                    <div class="relative group">
+                        <button class="px-2 py-1 md:px-4 md:py-2 rounded-full border-2 border-lime-100 text-lime-100 bg-transparent hover:bg-lime-100 hover:text-teal-900 text-sm">Aprende +</button>
+                        <!--  subsecciones -->
+                        <div class="submenu absolute left-0 mt-2 w-40 rounded-lg  hidden">
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Aprende</a>
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Puntos básicos</a>
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Tutoriales</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="relative group">
+                        <button class="px-2 py-1 md:px-4 md:py-2 rounded-full border-2 border-lime-100 text-lime-100 bg-transparent hover:bg-lime-100 hover:text-teal-900 text-sm">Técnicas +</button>
+                        <!--  subsecciones -->
+                        <div class="submenu absolute left-0 mt-2 w-40 rounded-lg  hidden">
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Técnicas</a>
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Tapestry</a>
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Tunisian</a>
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Filet</a>
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Freeform</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="px-2 py-1 md:px-4 md:py-2 rounded-full border-2 border-lime-100 text-lime-100 bg-transparent hover:bg-lime-100 hover:text-teal-900 text-sm">
+                    <a href="#">Artistas</a>
+                </li> 
+                <li class="px-2 py-1 md:px-4 md:py-2 rounded-full border-2 border-lime-100 text-lime-100 bg-transparent hover:bg-lime-100 hover:text-teal-900 text-sm">
+                    <a href="#" >Trivia</a>
+                </li>
+                <li class="px-2 py-1 md:px-4 md:py-2 rounded-full border-2 border-lime-100 text-lime-100 bg-transparent hover:bg-lime-100 hover:text-teal-900 text-sm">
+                    <a href="#">Contador</a>
+                </li>
+                <li class="px-2 py-1 md:px-4 md:py-2 text-lime-100 bg-transparent hover:text-sky-200 text-sm">
+                    <a href="#">Home</a>
+                </li>
+            </ul>
+            <!-- Logo -->
+            <div class="text-4xl md:px-4 fuenteesmall text-lime-100">C</div>
+
+            <!-- Botón de menú hamburguesa (mobile) -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-lime-100" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu desplegable en mobile -->
+        <ul id="menu" class="hidden md:hidden mt-2 bg-transparent p-4 space-y-2">
+            <li class="block text-lime-100 font-semibold">
+            <a href="#">Home</a>
+            </li>
+            <li class="block text-lime-100 font-semibold">
+                <a href="#">Tradición</a>
+            </li>
+            <li>
+                <div class="relative group">
+                    <button class="block text-lime-100 font-semibold ">Aprende +</button>
+                    <!-- subsecciones -->
+                    <div class="submenu hidden mt-2 pl-4 space-y-1">
+                        <a href="#" class="block text-lime-100 font-semibold ">Aprende</a>
+                        <a href="#" class="block text-lime-100 font-semibold ">Puntos básicos</a>
+                        <a href="#" class="block text-lime-100 font-semibold ">Tutoriales</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="relative group">
+                    <button class="block text-lime-100 font-semibold">Técnicas +</button>
+                    <!-- subsecciones -->
+                    <div class="submenu hidden mt-2 pl-4 space-y-1">
+                        <a href="#" class="block text-lime-100 font-semibold ">Técnicas</a>
+                        <a href="#" class="block text-lime-100 font-semibold ">Tapestry</a>
+                        <a href="#" class="block text-lime-100 font-semibold ">Tunisian</a>
+                        <a href="#" class="block text-lime-100 font-semibold ">Filet</a>
+                        <a href="#" class="block text-lime-100 font-semibold ">Freeform</a>
+                    </div>
+                </div>
+            </li>
+            <li class="block text-lime-100 font-semibold">
+                <a href="#">Artistas</a>
+            </li>
+            <li class="block text-lime-100 font-semibold"> 
+                <a href="#">Trivia</a>
+            </li>
+            <li class="block text-lime-100 font-semibold">
+                <a href="#">Contador</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <main class="flex-grow">
+
+      <div class="w-full items-center">
+        <h1 class="fuenteesmall text-6xl text-teal-900 text-center p-6 md:mb-12"> Artistas</h1>      
+      </div>
+
+      <article class="grid grid-cols-1 md:grid-cols-2">
+
+        <div class="col-span-1 md:col-span-1 bg-rose-200 flex justify-center items-center bg-teal-950 md:mb-12">
+          <div id="app" class="w-full h-auto  relative overflow-hidden md:rounded-2xl m-4 mx-14">
+            <div class="flex transition-transform duration-500 ease-in-out" 
+                 :style="{ transform: 'translateX(' + (-currentIndex * 100) + '%)' }">
+              <img v-for="(image, index) in images" :src="image" :key="index" alt="olek" 
+                   class="w-full object-contain flex-shrink-0">
+            </div>
+            <!-- Botones -->
+            <button @click="prevSlide" 
+                    class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-transparent text-white px-3 py-2 rounded-full">
+              &#10094;
+            </button>
+            <button @click="nextSlide" 
+                    class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-transparent text-white px-3 py-2 rounded-full">
+              &#10095;
+            </button>
+          </div>
+        </div>
+
+        <div class="col-span-1 md:col-span-1 bg-teal-950 flex justify-center items-center md:rounded-r-2xl md:mr-8 md:mb-12">
+          <div class="w-full h-64 overflow-auto p-4 md:rounded-lg bg-transparent min-h-screen m-4 md:m-8">
+            <p class="text-xl text-lime-100 text-justify m-4">
+              Ágata Oleksiak es una artista polaca quien vive y trabaja en Nueva York, es conocida alrededor del mundo simplemente como <span class="fuentepixel text-6xl"> Olek </span> y se dedica a tejer las calles, parques y galerías de arte con vibrantes colores como fucsia, rojo y amarillo.
+              Olek eligió como expresión artística la técnica del crochet o tejido de gancho por ser la metáfora ideal para entender las interconexiones de la vida, esa dependencia que une las venas con los órganos del cuerpo haciendo posible la existencia de una sincronía vital entre el ser humano y la mente. Además, visualiza las relaciones humanas como un manojo de hilos en constante transformación que se enredan, se unen y se separan cíclicamente.El crochet en sus obras es el equivalente al tejido humano que nos constituye: la piel. Cada una de sus creaciones posee una materialidad inseparable, no invade los objetos ni los espacios, los complementa formando un todo, en palabras de la artista: “las conexiones son más fuertes desde la unidad, en lugar de acciones distintas y fragmentadas pero, si se corta una de ellas, todo se vendrá abajo”.
+              Su trabajo pertenece a la corriente de arte contemporáneo “yarn bombing”, que inspira a los transeúntes a detenerse y estar por un momento conectados con la obra, con los espacios y con el arte. Otros críticos la consideran una exponente del arte-objeto. Olek está convencida de que su obra brinda color y vida a las personas y no pide permiso para cubrir con crochet la ciudad, sin importar la importancia de los monumentos que escoja para tapizar, pues considera que si el arte urbano es permitido pierde la pureza de ser una acción creativa y espontánea que sólo puede poseer un arte que es accesible y gratuito para todo ciudadano que explore la ciudad.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-span-1 md:col-span-1 bg-rose-200 flex justify-center items-center bg-teal-950 md:mb-12 md:ml-8 md:rounded-l-2xl">
+          <div id="app2" class="w-full h-auto  relative overflow-hidden mx-14  m-12 md:rounded-2xl">
+            <div class="flex transition-transform duration-500 ease-in-out" 
+                 :style="{ transform: 'translateX(' + (-currentIndex * 100) + '%)' }">
+              <img v-for="(image, index) in images" :src="image" :key="index" alt="Yulia Ustinova" 
+                   class="w-full object-contain flex-shrink-0">
+            </div>
+            <!-- Botones -->
+            <button @click="prevSlide" 
+                    class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-transparent text-white px-3 py-2 rounded-full">
+              &#10094;
+            </button>
+            <button @click="nextSlide" 
+                    class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-transparent text-white px-3 py-2 rounded-full">
+              &#10095;
+            </button>
+          </div>
+        </div>
+
+        <div class="col-span-1 md:col-span-1 bg-teal-950 flex justify-center items-center md:mb-12">
+          <div class="w-full h-64 overflow-auto p-4 md:rounded-lg bg-transparent min-h-screen m-4 md:m-8">
+            <p class="text-xl text-lime-100 text-justify m-4">
+              <span class="fuentepixel text-6xl"> Yulia Ustinova </span> es una artista rusa que utiliza el arte del crochet para replicar obras de arte famosas y para confeccionar formas nuevas creadas por ella en esculturas suaves figurativas en poses relajadas y naturales. <br>
+              Son esculturas con cierto peso, utiliza lana apretada y una «carcasa» de metal dentro de la piel a la que le ha dado color uniendo cuatro o cinco hebras y así va creando esculturas de mujeres diversas, de todos los colores, formas, posturas y expresiones. <br>
+              » Aunque mis figuras brillan con vivacidad, veo una tristeza destilada en ellas: una vida personal difícil o una desgracia en el amor». <br>
+              «Utilizo la forma humana como punto de partida. A veces esta forma está vestida, pero la mayoría de las veces no lo está». <br>
+              «Elijo las mujeres-escultura, mis gorditas, como suelo referirme a ellas, para no estar vestidas, porque me interesa más la plasticidad y la forma. La ropa hace que mis obras se vean más literarias, más cercanas a las muñecas. Y hago algo así como una parodia de las esculturas clásicas»,
+              «Todas mis ideas las saco de la vida real que me rodea, de mis pensamientos sobre ciertos hechos. A veces la plasticidad dicta la trama, a veces, por el contrario, en mis obras toman forma sentimientos e impresiones de la vida real».
+            </p>
+          </div>
+        </div>
+
+        <div class="col-span-1 md:col-span-1 bg-rose-200 flex justify-center items-center bg-teal-950 md:mb-12">
+          <div id="app3" class="w-full h-auto  relative overflow-hidden md:rounded-2xl m-4 mx-14">
+            <div class="flex transition-transform duration-500 ease-in-out" 
+                 :style="{ transform: 'translateX(' + (-currentIndex * 100) + '%)' }">
+              <img v-for="(image, index) in images" :src="image" :key="index" alt="Toshiko Horiuchi MacAdams"
+                   class="w-full object-contain flex-shrink-0">
+            </div>
+            <!-- Botones -->
+            <button @click="prevSlide" 
+                    class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-transparent text-white px-3 py-2 rounded-full">
+              &#10094;
+            </button>
+            <button @click="nextSlide" 
+                    class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-transparent text-white px-3 py-2 rounded-full">
+              &#10095;
+            </button>
+          </div>
+        </div>
+
+        <div class="col-span-1 md:col-span-1 bg-teal-950 flex justify-center items-center md:rounded-r-2xl md:mr-8 md:mb-12">
+          <div class="w-full h-64 overflow-auto p-4 md:rounded-lg bg-transparent min-h-screen m-4 md:m-8">
+            <p class="text-xl text-lime-100 text-justify m-4">
+              <span class="fuentepixel text-6xl"> Toshiko Horiuchi MacAdams </span> es una artista plástica japonesa. Se especializa en la creación de entornos de gran tamaño y en textiles interactivos que funcionan como exploraciones imaginativas y vibrantes de colores y formas y a la vez proporcionan emocionantes ambientes de juego. <br>
+              Su trabajo fue en una parte muy importante de la nueva ola del arte de fibra que ocurrió en la década de los 70s, y fue uno de los varios artistas japoneses en hacer una profunda impresión en el medio. <br>
+              Fue hasta mediados de los 90s que decidió convertir su arte en un área de juegos para niños. Esta idea surgió gracias a dos niñitos quienes se le aproximaron en una de sus exposiciones y relacionando su arte con una especie de hamaca gigante le preguntaron si la podrían trepar. Ella aceptó y observó como los niños se estiraban y retorcían encima de su obra disfrutándola más que cualquier observador de la pieza y fue entonces que decidió convertir su obra de arte en un espacio de juegos para niños. Un año después la artista japonesa abrió su primer gran patio crochet en conjunto con los ingenieros de TIS & Partners y los arquitectos paisajistas Takano Landscape Planning. <br>
+              Su parque para niños en Tokyo es el primer parque hecho a mano. Para este proyecto llamado “Rainbow Net,”  Horiuchi tejió durante 13 meses, 10 horas diarias en ganchillo o crochet. En Julio comenzó el montaje de la estructura y dos semanas después se inauguró al público. Este espacio exclusivo para niños, es un lugar lleno de color, texturas, paredes que se pueden escalar, formas peculiares y libertad para moverte que convierte en realidad todo lo que un niño sueña. <br>
+            </p>
+          </div>
+        </div>
+      </article>
+        
+    </main>
+
+      <!-- Footer -->
+      <footer class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 mt-auto bg-teal-950 py-4 text-white">
+        <div class="flex justify-center space-x-6 m-8">
+          <a href="#" class="fuentepixel rounded-2xl bg-lime-100 p-2 text-xl text-teal-900 hover:bg-sky-200 hover:text-rose-300 ">About</a>
+          <a href="#" class="fuentepixel rounded-2xl bg-lime-100 p-2 text-xl text-teal-900 hover:bg-sky-200 hover:text-rose-300 ">Contacto</a>
+        </div>
+        <div class="flex justify-center space-x-6 mb-4">
+          <a href="#" class="fuentepixel text-lime-100 hover:text-sky-200">Home</a>
+          <a href="#" class="fuentepixel text-lime-100 hover:text-sky-200">Back to top</a>
+        </div>
+      </footer>
+
+    <script src="./js/menu.js"></script> <!-- script navbar -->
+    <script src="./js/galeria.js"></script> <!-- script navbar -->
+
+</body>
+</html>
