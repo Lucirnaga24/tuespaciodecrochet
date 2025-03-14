@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEDC / Juego</title>
+  <!--  Mi hoja de estilos -->
+  <link rel="stylesheet" type="text/css" href="./css/estilos.css">
+  <!--  Adobe Fonts kit -->
+  <link rel="stylesheet" href="https://use.typekit.net/bup5rhc.css">
+  <!--  Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-lime-100 flex flex-col min-h-screen">
+    <!-- nav -->
+    <nav class="bg-teal-900 p-4 pb-6 rounded-2xl m-2 md:rounded-full md:m-6">
+        <!-- Menu notebook -->
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Links -->
+            <ul class="hidden md:flex space-x-6">
+                <li class="px-2 py-1 md:px-4 md:py-2 rounded-full border-2 border-lime-100 text-lime-100 bg-transparent hover:bg-lime-100 hover:text-teal-900 text-sm">
+                    <a href="#">Tradición</a>
+                </li>
+                <li>
+                    <div class="relative group">
+                        <button class="px-2 py-1 md:px-4 md:py-2 rounded-full border-2 border-lime-100 text-lime-100 bg-transparent hover:bg-lime-100 hover:text-teal-900 text-sm">Aprende +</button>
+                        <!--  subsecciones -->
+                        <div class="submenu absolute left-0 mt-2 w-40 rounded-lg  hidden">
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Aprende</a>
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Puntos básicos</a>
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Tutoriales</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="relative group">
+                        <button class="px-2 py-1 md:px-4 md:py-2 rounded-full border-2 border-lime-100 text-lime-100 bg-transparent hover:bg-lime-100 hover:text-teal-900 text-sm">Técnicas +</button>
+                        <!--  subsecciones -->
+                        <div class="submenu absolute left-0 mt-2 w-40 rounded-lg  hidden">
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Técnicas</a>
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Tapestry</a>
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Tunisian</a>
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Filet</a>
+                            <a href="#" class="block px-4 py-2 rounded-full text-lime-100 bg-teal-900 hover:bg-lime-100 border-2 border-lime-100 hover:border-teal-900 hover:text-teal-900 text-center text-sm">Freeform</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="px-2 py-1 md:px-4 md:py-2 rounded-full border-2 border-lime-100 text-lime-100 bg-transparent hover:bg-lime-100 hover:text-teal-900 text-sm">
+                    <a href="#">Artistas</a>
+                </li> 
+                <li class="px-2 py-1 md:px-4 md:py-2 rounded-full border-2 border-lime-100 text-lime-100 bg-transparent hover:bg-lime-100 hover:text-teal-900 text-sm">
+                    <a href="#" >Trivia</a>
+                </li>
+                <li class="px-2 py-1 md:px-4 md:py-2 rounded-full border-2 border-lime-100 text-lime-100 bg-transparent hover:bg-lime-100 hover:text-teal-900 text-sm">
+                    <a href="#">Contador</a>
+                </li>
+                <li class="px-2 py-1 md:px-4 md:py-2 text-lime-100 bg-transparent hover:text-sky-200 text-sm">
+                    <a href="#">Home</a>
+                </li>
+            </ul>
+            <!-- Logo -->
+            <div class="text-4xl md:px-4 fuenteesmall text-lime-100">C</div>
+
+            <!-- Botón de menú hamburguesa (mobile) -->
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-lime-100" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Menu desplegable en mobile -->
+        <ul id="menu" class="hidden md:hidden mt-2 bg-transparent p-4 space-y-2">
+            <li class="block text-lime-100 font-semibold">
+                <a href="#">Home</a>
+            </li>
+            <li class="block text-lime-100 font-semibold">
+                <a href="#">Tradición</a>
+            </li>
+            <li>
+                <div class="relative group">
+                    <button class="block text-lime-100 font-semibold ">Aprende +</button>
+                    <!-- subsecciones -->
+                    <div class="submenu hidden mt-2 pl-4 space-y-1">
+                        <a href="#" class="block text-lime-100 font-semibold ">Aprende</a>
+                        <a href="#" class="block text-lime-100 font-semibold ">Puntos básicos</a>
+                        <a href="#" class="block text-lime-100 font-semibold ">Tutoriales</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="relative group">
+                    <button class="block text-lime-100 font-semibold">Técnicas +</button>
+                    <!-- subsecciones -->
+                    <div class="submenu hidden mt-2 pl-4 space-y-1">
+                        <a href="#" class="block text-lime-100 font-semibold ">Técnicas</a>
+                        <a href="#" class="block text-lime-100 font-semibold ">Tapestry</a>
+                        <a href="#" class="block text-lime-100 font-semibold ">Tunisian</a>
+                        <a href="#" class="block text-lime-100 font-semibold ">Filet</a>
+                        <a href="#" class="block text-lime-100 font-semibold ">Freeform</a>
+                    </div>
+                </div>
+            </li>
+            <li class="block text-lime-100 font-semibold">
+                <a href="#">Artistas</a>
+            </li>
+            <li class="block text-lime-100 font-semibold"> 
+                <a href="#">Trivia</a>
+            </li>
+            <li class="block text-lime-100 font-semibold">
+                <a href="#">Contador</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Main -->
+    <main class="flex-grow">
+        <div>
+            <h1 class="text-4xl text-teal-900 text-center fuentepixel">JUEGO PASAPALABRA</h1>
+            <div class="mt-4 p-4 my-4 md:mx-20 text-teal-900 text-lg" >
+                <p class="fuentepixel text-center text-xl"> Poné a pruba tu atención, memoria y rapidez en este juego tipo pasapalbra con temática de crochet ☺</p>
+                <p class="fuentepixel text-xl mt-4">Objetivo</p>
+                <p>Responder correctamente la mayor cantidad de palabras antes de que se acabe el tiempo (120 segundos).</p>
+        
+                <p class="fuentepixel text-xl mt-4">Cómo se juega</p>
+                <ul class="list-disc pl-5">
+                    <li>Son 26 palabras, cada una comienza por una letra del abecedario.</li>
+                    <li>Se te dará una pista por palabra, que debes usar para adivinar la palabra correcta.</li>
+                    <li>Presiona el botón JUGAR para iniciar el juego.</li>
+                    <li>Se mostrará una pista junto con la letra inicial de la palabra.</li>
+                    <li>Escribe tu respuesta en el campo de entrada y presiona Enter o el botón ENVIAR.</li>
+                    <li>Si la respuesta es correcta, la letra cambiará a verde y pasarás a la siguiente palabra.</li>
+                    <li>Si la respuesta es incorrecta, la letra cambiará a rojo y avanzarás a la siguiente palabra.</li>
+                    <li>Si no sabes la respuesta, presiona la tecla → o el botón PASAR para intentarlo después. La letra se marcará en azul.</li>
+                    <li>Continúa hasta que completes todas las palabras o se acabe el tiempo.</li>
+                    <li>Al terminar, se mostrará tu puntaje total.</li>
+                </ul>
+            </div>
+        
+            <div class="mt-12 p-4 bg-teal-950 my-8 md:mx-20 py-12 md:rounded-2xl grid place-items-center gap-6">
+                <p id="timer" class="p-4 text-lime-100 text-3xl md:text-4xl" style="display: none;">TIEMPO: 120s</p>
+                <p id="pista" class="p-4 text-lime-100 rounded-2xl text-xl md:text-2xl"></p>
+            
+                <button id="jugar" class="p-4 bg-teal-800 text-lime-100 rounded-2xl text-xl md:text-2xl w-11/12 md:w-auto">
+                    JUGAR
+                </button>
+                
+                <div class="flex flex-col md:flex-row gap-4 items-center w-full md:w-auto justify-center">
+                    <input class="p-4 bg-stone-100 rounded-full w-11/12 md:w-auto text-lg md:text-xl" 
+                           type="text" id="input" placeholder="Escribe la palabra" autocomplete="off" style="display: none;">
+                    <button id="enviar" class="p-4 bg-lime-300 text-teal-900 rounded-2xl w-11/12 md:w-auto" style="display: none;">
+                        ENVIAR
+                    </button>
+                    <button id="pasar" class="p-4 bg-sky-300 text-teal-900 rounded-2xl w-11/12 md:w-auto" style="display: none;">
+                        PASAR
+                    </button>
+                </div>
+            
+                <p id="resultado" class="p-4 text-lg font-bold text-center"></p>
+                <div id="letras" class="flex flex-wrap justify-center mx-4 md:mx-20 text-center"></div>
+                
+                <div id="divreestart" class="text-center w-full md:w-auto" style="display: none;">
+                    <button id="reestart" class="p-4 bg-teal-800 text-lime-100 mb-4 mx-2 rounded-2xl w-11/12 md:w-auto">
+                        VOLVER A JUGAR
+                    </button>
+                    <button id="respuestas" class="p-4 bg-teal-800 text-lime-100 mb-4 mx-2 rounded-2xl w-11/12 md:w-auto">
+                        VER RESPUESTAS
+                    </button>
+                </div>
+            </div>
+        
+            <div id="divrespuestas" class="bg-teal-950 p-4 my-8 md:mx-20 py-12 md:rounded-2xl" style="display: none;">
+                <p class="p-4 text-lime-100 rounded-2xl">
+                    <span><strong>"A"</strong> Herramienta esencial para tejer crochet: <strong>aguja</strong></span><br>
+                    <span><strong>"B"</strong> Uno de los puntos básicos: <strong>bajo</strong></span><br>
+                    <span><strong>"C"</strong> Técnica de tejido con gancho: <strong>crochet</strong></span><br>
+                    <span><strong>"D"</strong> Acción posible con la técnica tapestry crochet: <strong>dibujar</strong></span><br>
+                    <span><strong>"E"</strong> Tipo de tejido fino con diseños abiertos: <strong>encaje</strong></span><br>
+                    <span><strong>"F"</strong> Técnica de crochet con espacios cerrados y abiertos: <strong>filet</strong></span><br>
+                    <span><strong>"G"</strong> Tipo de cuadro famoso en prendas de los años 70: <strong>granny</strong></span><br>
+                    <span><strong>"H"</strong> Material utilizado para tejer crochet: <strong>hilo</strong></span><br>
+                    <span><strong>"I"</strong> País clave en la historia del crochet: <strong>irlanda</strong></span><br>
+                    <span><strong>"J"</strong> País de donde proviene la artista Toshiko Horiuchi MacAdams: <strong>japon</strong></span><br>
+                    <span><strong>"K"</strong> Medida utilizada para pesar ovillos: <strong>kilogramo</strong></span><br>
+                    <span><strong>"L"</strong> Hilado de origen animal: <strong>lana</strong></span><br>
+                    <span><strong>"M"</strong> Herramientas usadas para señalar puntos en crochet: <strong>marcadores</strong></span><br>
+                    <span><strong>"N"</strong> Se generan cuando se enreda el ovillo: <strong>nudos</strong></span><br>
+                    <span><strong>"O"</strong> Su trabajo pertenece a la corriente de arte contemporáneo “yarn bombing”: <strong>olek</strong></span><br>
+                    <span><strong>"P"</strong> Diseño que guía la realización de un tejido en crochet: <strong>patron</strong></span><br>
+                    <span><strong>"Q"</strong> (segunda letra) Término en inglés para los 'cuadrados de abuela': <strong>square</strong></span><br>
+                    <span><strong>"R"</strong> Lugar donde actualmente se comparte mucho sobre crochet: <strong>redes</strong></span><br>
+                    <span><strong>"S"</strong> Se usan para representar los puntos en un patrón: <strong>simbolos</strong></span><br>
+                    <span><strong>"T"</strong> Técnica utilizada para hacer dibujos cambiando de color: <strong>tapestry</strong></span><br>
+                    <span><strong>"U"</strong> Apellido de la artista que hace esculturas de mujeres en poses relajadas y naturales: <strong>ustinova</strong></span><br>
+                    <span><strong>"V"</strong> Prenda de vestir que se puede tejer a crochet: <strong>vestido</strong></span><br>
+                    <span><strong>"W"</strong> Primer nombre del antropólogo que halló vestigios de crochet en Sudamérica: <strong>walter</strong></span><br>
+                    <span><strong>"X"</strong> (tercera letra) Palabra clave para encontrar patrones de tapestry crochet '_____ chart': <strong>pixel</strong></span><br>
+                    <span><strong>"Y"</strong> Primer nombre de la artista que hace esculturas de mujeres en poses relajadas y naturales: <strong>yulia</strong></span><br>
+                    <span><strong>"Z"</strong> Patrón con forma de picos en triángulo sucesivos: <strong>zigzag</strong></span><br>
+                </p>
+            </div>
+        </div>
+    </main>
+
+      <!-- Footer -->
+      <footer class="mx-auto w-full max-w-container px-4 sm:px-6 lg:px-8 mt-auto bg-teal-950 py-4 text-white">
+        <div class="flex justify-center space-x-6 m-8">
+          <a href="#" class="fuentepixel rounded-2xl bg-lime-100 p-2 text-xl text-teal-900 hover:bg-sky-200 hover:text-rose-300 ">About</a>
+          <a href="#" class="fuentepixel rounded-2xl bg-lime-100 p-2 text-xl text-teal-900 hover:bg-sky-200 hover:text-rose-300 ">Contacto</a>
+        </div>
+        <div class="flex justify-center space-x-6 mb-4">
+          <a href="#" class="fuentepixel text-lime-100 hover:text-sky-200">Home</a>
+          <a href="#" class="fuentepixel text-lime-100 hover:text-sky-200">Back to top</a>
+        </div>
+      </footer>
+
+      <script src="./js/menu.js"></script> <!-- script navbar -->
+      <script src="./js/juego.js"></script>
+
+</body>
+</html>
