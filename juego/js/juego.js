@@ -58,15 +58,16 @@ function mostrarLetras() {
     });
 }
 
-function cambiarColorLetra(letra, color) {
-    document.querySelector("#letra-" + letra).style.backgroundColor = color;
-}
+        function cambiarColorLetra(letra, color) {
+        document.querySelector("#letra-" + letra).style.backgroundColor = color;
+        }
 
 // iniciar juego
 function iniciarJuego() {
     botonInicio.style.display = "none";
     mostrarLetras(); 
     mostrarPregunta(); 
+    // timer
     temporizador = setInterval(() => {
         tiempo--;
         tiempoElemento.textContent = "Tiempo: " + tiempo + "s";
@@ -81,6 +82,7 @@ function iniciarJuego() {
     entradaElemento.focus();
 }
 
+// muestra la pista. Si no queda ninguna termina el juego
 function mostrarPregunta() {
     if (indicePregunta < palabras.length) {
         pistaElemento.textContent = palabras[indicePregunta].pista;
@@ -91,20 +93,22 @@ function mostrarPregunta() {
     }
 }
 
+// comprueba si el input coincide con la respuesta correcta
 function comprobarRespuesta() {
     const respuestaUsuario = entradaElemento.value.trim().toLowerCase();
     const respuestaCorrecta = palabras[indicePregunta].respuesta.toLowerCase();
     const letraActual = palabras[indicePregunta].letra;
     if (respuestaUsuario === respuestaCorrecta) {
-        puntaje++; 
+        puntaje++;                                 // suma 1 al punaje si es correcto
         cambiarColorLetra(letraActual, "green"); 
     } else {
         cambiarColorLetra(letraActual, "red");
     }
-    indicePregunta++;
+    indicePregunta++; // para recorrer el array
     mostrarPregunta();
 }
 
+// pasapalabra. Copia el array y pone la letra al final
 function pasarPalabra() {
     if (indicePregunta < palabras.length) {
         const palabraActual = palabras.splice(indicePregunta, 1)[0];
@@ -114,6 +118,7 @@ function pasarPalabra() {
     mostrarPregunta();
 }
 
+// deshabilita botones y muestra resultado
 function terminarJuego() {
     clearInterval(temporizador);
     pistaElemento.textContent = " JUEGO TERMINADO !! Respuestas correctas: " + puntaje + "/" + palabras.length;

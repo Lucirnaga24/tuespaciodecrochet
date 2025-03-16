@@ -1,12 +1,14 @@
+// Galerías hechas con: https://tailwindflex.com/@perky98/carousel-3
+
 new Vue({
   el: "#app",
   data: {
     images: [
-    "./media/olek2.jpg",
-    "./media/olek3.jpg",
-    "./media/olek4.jpg",
-    "./media/olek5.jpg",
-    "./media/olek6.jpg",
+    "./media/o2.jpg",
+    "./media/o3.jpg",
+    "./media/o4.jpg",
+    "./media/o5.jpg",
+    "./media/o6.jpg",
     ],
     currentIndex: 0
   },

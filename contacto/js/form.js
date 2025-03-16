@@ -1,4 +1,5 @@
-// VALIDACION DEL FORMULARIO DE CONTACTO
+// Form by: https://www.geeksforgeeks.org/create-contact-form-template-in-tailwind-css/?ref=oin_asr1
+
 let contactForm = document.querySelector('#contactForm');
 let nameInput = document.querySelector('#name');
 let nameValidation = document.querySelector('#nameValidation');
@@ -34,7 +35,7 @@ contactForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
     if (validateForm()) {
-        alert('Form submitted successfully!');
+        alert('Mensaje enviado con éxito!');
         this.submit();
     }
 });
